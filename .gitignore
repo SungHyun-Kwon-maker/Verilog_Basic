@@ -1,0 +1,23 @@
+# Vivado project garbage
+*.jou
+*.log
+*.str
+*.xpr
+*.xml
+
+# Vivado-generated folders
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.ip_user_files/
+
+# Simulation and temp files
+*.wdb
+*.pb
+*.key
+*.svf
+*.db
+*.bak
+*.tmp
+*.vcd
