@@ -5,8 +5,8 @@ Basic Verilog modules for digital logic practice (AND, OR, NOT, XOR, NAND, NOR, 
 To practice implementing and testing fundamental digital logic gates using Verilog HDL.
 
 ## Environment
-Language : Verilog (Vivado 2024.2)
-Board : BASYS3 FPGA BOARD FOR VIVADO
+- **Language** : Verilog (Vivado 2024.2)
+- **Board** : BASYS3 FPGA BOARD FOR VIVADO
 
 ## File Structure
 ```
