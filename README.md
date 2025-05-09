@@ -1,5 +1,5 @@
 # Verilog_Basic
-Basic Verilog modules for digital logic practice (AND, OR, NOT, XOR, NAND, NOR, Half Adder etc.) with testbenches and simulation results.
+Basic Verilog modules for digital logic practice (AND, OR, NOT, XOR, NAND, NOR, Half Adder, etc.) with testbenches and simulation results.
 
 ## Goal
 To practice implementing and testing fundamental digital logic gates using Verilog HDL.
@@ -14,14 +14,17 @@ Verilog_Basic/
 ├── gates/
 │   ├── and_gate.v
 │   ├── and_gate_tb.v
+│   ├── nand_gate.v
+│   ├── nand_gate_tb.v
 │   ├── not_gate.v
 │   ├── not_gate_tb.v
 │   ├── or_gate.v
 │   ├── or_gate_tb.v
 │   └── sim/
 │       ├── waveform_and.png
-│       ├── waveform_or.png
-│       └── waveform_not.png
+│       ├── waveform_nand.png
+│       ├── waveform_not.png
+│       └── waveform_or.png
 ├── README.md
 ├── .gitignore
 └── LICENSE
@@ -40,6 +43,9 @@ This repository contains the following modules in the 'gates/' folder:
 - `not_gate.v` : 1-bit NOT gate
 - `not_gate_tb.v` : Testbench for NOT gate
 - `gates/sim/waveform_not.png` : Simulation waveform
+- `nand_gate.v` : 1-bit NAND gate
+- `nand_gate_tb.v` : Testbench for NAND gate
+- `gates/sim/waveform_nand.png`: Simulation waveform
 
 ## License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
