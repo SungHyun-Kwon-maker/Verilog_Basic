@@ -16,6 +16,8 @@ Verilog_Basic/
 │   ├── and_gate_tb.v
 │   ├── nand_gate.v
 │   ├── nand_gate_tb.v
+│   ├── nor_gate.v
+│   ├── nor_gate_tb.v
 │   ├── not_gate.v
 │   ├── not_gate_tb.v
 │   ├── or_gate.v
@@ -23,6 +25,7 @@ Verilog_Basic/
 │   └── sim/
 │       ├── waveform_and.png
 │       ├── waveform_nand.png
+│       ├── waveform_nor.png
 │       ├── waveform_not.png
 │       └── waveform_or.png
 ├── README.md
@@ -34,18 +37,25 @@ Verilog_Basic/
 
 This repository contains the following modules in the 'gates/' folder:
 
-- `and_gate.v` : 1-bit AND gate
-- `and_gate_tb.v` : Testbench for AND gate
-- `gates/sim/waveform_and.png`: Simulation waveform
-- `or_gate.v` : 1-bit OR gate
-- `or_gate_tb.v` : Testbench for OR gate
-- `gates/sim/waveform_or.png` : Simulation waveform
-- `not_gate.v` : 1-bit NOT gate
-- `not_gate_tb.v` : Testbench for NOT gate
-- `gates/sim/waveform_not.png` : Simulation waveform
-- `nand_gate.v` : 1-bit NAND gate
-- `nand_gate_tb.v` : Testbench for NAND gate
-- `gates/sim/waveform_nand.png`: Simulation waveform
+- `and_gate.v` : 1-bit AND gate  
+  `and_gate_tb.v` : Testbench for AND gate  
+  `sim/waveform_and.png` : Simulation waveform
+
+- `or_gate.v` : 1-bit OR gate  
+  `or_gate_tb.v` : Testbench for OR gate  
+  `sim/waveform_or.png` : Simulation waveform
+
+- `not_gate.v` : 1-bit NOT gate  
+  `not_gate_tb.v` : Testbench for NOT gate  
+  `sim/waveform_not.png` : Simulation waveform
+
+- `nand_gate.v` : 1-bit NAND gate  
+  `nand_gate_tb.v` : Testbench for NAND gate  
+  `sim/waveform_nand.png` : Simulation waveform
+
+- `nor_gate.v` : 1-bit NOR gate  
+  `nor_gate_tb.v` : Testbench for NOR gate  
+  `sim/waveform_nor.png` : Simulation waveform
 
 ## License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.

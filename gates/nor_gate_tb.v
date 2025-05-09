@@ -1,11 +1,11 @@
-// file : nand_gate_tb.v
-// Testbench for NAND gate
+// file : nor_gate_tb.v
+// Testbench for NOR gate
 `timescale 1 ns / 1 ps
 
-module nand_gate_tb;
+module nor_gate_tb;
     reg a, b;
     wire x;
-    nand_gate nand_gate_uut(.A(a), .B(b), .X(x));
+    nor_gate nor_gate_uut(.A(a), .B(b), .X(x));
     initial begin
         a = 1'b0; b = 1'b0;
         #10 $display("A: %b, B: %b, X: %b", a, b, x);

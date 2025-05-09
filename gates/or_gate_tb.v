@@ -3,18 +3,18 @@
 `timescale 1ns / 1ps
 
 module or_gate_tb;
-    reg ra,rb;
-    wire rx;
-    or_gate or_gate_uut(.A(ra),.B(rb),.X(rx));
+    reg a,b;
+    wire x;
+    or_gate or_gate_uut(.A(a),.B(b),.X(x));
     initial begin
-        ra = 1'b0; rb = 1'b0;
-        #10 $display("A: %b, B: %b, X: %b",ra,rb,rx);
-        ra = 1'b1; rb = 1'b0;
-        #10 $display("A: %b, B: %b, X: %b",ra,rb,rx);
-        ra = 1'b0; rb = 1'b1;
-        #10 $display("A: %b, B: %b, X: %b",ra,rb,rx);
-        ra = 1'b1; rb = 1'b1;
-        #10 $display("A: %b, B: %b, X: %b",ra,rb,rx);
+        a = 1'b0; b = 1'b0;
+        #10 $display("A: %b, B: %b, X: %b", a, b, x);
+        a = 1'b1; b = 1'b0;
+        #10 $display("A: %b, B: %b, X: %b", a, b, x);
+        a = 1'b0; b = 1'b1;
+        #10 $display("A: %b, B: %b, X: %b", a, b, x);
+        a = 1'b1; b = 1'b1;
+        #10 $display("A: %b, B: %b, X: %b", a, b, x);
         #10 $finish;
     end
 endmodule

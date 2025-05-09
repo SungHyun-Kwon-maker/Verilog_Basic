@@ -4,16 +4,16 @@
 `timescale 1 ns / 1 ps
 
 module not_gate_tb;
-    reg ra;
-    wire rx;
-    not_gate not_gate_uut(.A(ra),.X(rx));
+    reg a;
+    wire x;
+    not_gate not_gate_uut(.A(a), .X(x));
     initial begin
-        ra = 1'b0;
-        #10 $display("A: %b, X: %b",ra,rx);
-        ra = 1'b1;
-        #10 $display("A: %b, X: %b",ra,rx);
-        ra = 1'b0;
-        #10 $display("A: %b, X: %b",ra,rx);
+        a = 1'b0;
+        #10 $display("A: %b, X: %b", a, x);
+        a = 1'b1;
+        #10 $display("A: %b, X: %b", a, x);
+        a = 1'b0;
+        #10 $display("A: %b, X: %b", a, x);
         #10 $finish;
     end
 endmodule
