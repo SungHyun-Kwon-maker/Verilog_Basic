@@ -22,12 +22,15 @@ Verilog_Basic/
 │   ├── not_gate_tb.v
 │   ├── or_gate.v
 │   ├── or_gate_tb.v
+│   ├── xor_gate.v
+│   ├── xor_gate_tb.v
 │   └── sim/
 │       ├── waveform_and.png
 │       ├── waveform_nand.png
 │       ├── waveform_nor.png
 │       ├── waveform_not.png
-│       └── waveform_or.png
+│       ├── waveform_or.png
+│       └── waveform_xor.png
 ├── README.md
 ├── .gitignore
 └── LICENSE
@@ -56,6 +59,10 @@ This repository contains the following modules in the 'gates/' folder:
 - `nor_gate.v` : 1-bit NOR gate  
   `nor_gate_tb.v` : Testbench for NOR gate  
   `sim/waveform_nor.png` : Simulation waveform
+
+- `xor_gate.v` : 1-bit XOR gate  
+  `xor_gate_tb.v` : Testbench for XOR gate  
+  `sim/waveform_xor.png` : Simulation waveform
 
 ## License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
