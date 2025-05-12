@@ -26,14 +26,36 @@ Verilog_Basic/
 │   ├── xnor_gate_tb.v
 │   ├── xor_gate.v
 │   ├── xor_gate_tb.v
+│   ├── delay/
+│   │ ├── and_gate_delay.v
+│   │ ├── and_gate_delay_tb.v
+│   │ ├── nand_gate_delay.v
+│   │ ├── nand_gate_delay_tb.v
+│   │ ├── nor_gate_delay.v
+│   │ ├── nor_gate_delay_tb.v
+│   │ ├── not_gate_delay.v
+│   │ ├── not_gate_delay_tb.v
+│   │ ├── or_gate_delay.v
+│   │ ├── or_gate_delay_tb.v
+│   │ ├── xnor_gate_delay.v
+│   │ ├── xnor_gate_delay_tb.v
+│   │ ├── xor_gate_delay.v
+│   │ └── xor_gate_delay_tb.v
 │   └── sim/
 │       ├── waveform_and.png
+│       ├── waveform_and_delay.png
 │       ├── waveform_nand.png
+│       ├── waveform_nand_delay.png
 │       ├── waveform_nor.png
+│       ├── waveform_nor_delay.png
 │       ├── waveform_not.png
+│       ├── waveform_not_delay.png
 │       ├── waveform_or.png
+│       ├── waveform_or_delay.png
 │       ├── waveform_xnor.png
-│       └── waveform_xor.png
+│       ├── waveform_xnor_delay.png
+│       ├── waveform_xor.png
+│       └── waveform_xor_delay.png
 ├── README.md
 ├── .gitignore
 └── LICENSE
@@ -70,6 +92,36 @@ This repository contains the following modules in the 'gates/' folder:
 - `xnor_gate.v` : 1-bit XNOR gate  
   `xnor_gate_tb.v` : Testbench for XNOR gate  
   `sim/waveform_xnor.png` : Simulation waveform
+
+### Delay-Based Gates
+
+- `delay/and_gate_delay.v` : 1-bit AND gate with 5ns delay  
+  `delay/and_gate_delay_tb.v` : Testbench for delayed AND gate  
+  `sim/waveform_and_delay.png` : Simulation waveform showing 5ns delay
+
+- `delay/or_gate_delay.v` : 1-bit OR gate with 5ns delay  
+  `delay/or_gate_delay_tb.v` : Testbench for delayed OR gate  
+  `sim/waveform_or_delay.png` : Simulation waveform showing 5ns delay
+
+- `delay/not_gate_delay.v` : 1-bit NOT gate with 5ns delay  
+  `delay/not_gate_delay_tb.v` : Testbench for delayed NOT gate  
+  `sim/waveform_not_delay.png` : Simulation waveform showing 5ns delay
+
+- `delay/nand_gate_delay.v` : 1-bit NAND gate with 5ns delay  
+  `delay/nand_gate_delay_tb.v` : Testbench for delayed NAND gate  
+  `sim/waveform_nand_delay.png` : Simulation waveform showing 5ns delay
+
+- `delay/nor_gate_delay.v` : 1-bit NOR gate with 5ns delay  
+  `delay/nor_gate_delay_tb.v` : Testbench for delayed NOR gate  
+  `sim/waveform_nor_delay.png` : Simulation waveform showing 5ns delay
+
+- `delay/xor_gate_delay.v` : 1-bit XOR gate with 5ns delay  
+  `delay/xor_gate_delay_tb.v` : Testbench for delayed XOR gate  
+  `sim/waveform_xor_delay.png` : Simulation waveform showing 5ns delay
+
+- `delay/xnor_gate_delay.v` : 1-bit XNOR gate with 5ns delay  
+  `delay/xnor_gate_delay_tb.v` : Testbench for delayed XNOR gate  
+  `sim/waveform_xnor_delay.png` : Simulation waveform showing 5ns delay
 
 ## License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
