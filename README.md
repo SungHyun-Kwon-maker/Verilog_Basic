@@ -2,7 +2,7 @@
 Basic Verilog modules for digital logic practice (AND, OR, NOT, XOR, NAND, NOR, Half Adder, etc.) with testbenches and simulation results.
 
 ## Goal
-To practice implementing and testing fundamental digital logic gates using Verilog HDL.
+To practice implementing and verifying basic digital logic gates using Verilog HDL.
 
 ## Environment
 - **Language** : Verilog (Vivado 2024.2)
@@ -14,6 +14,10 @@ Verilog_Basic/
 ├── gates/
 │   ├── and_gate.v
 │   ├── and_gate_tb.v
+│   ├── mux_2x1.v
+│   ├── mux_2x1_tb.v
+│   ├── mux_4x1.v
+│   ├── mux_4x1_tb.v
 │   ├── nand_gate.v
 │   ├── nand_gate_tb.v
 │   ├── nor_gate.v
@@ -44,6 +48,8 @@ Verilog_Basic/
 │   └── sim/
 │       ├── waveform_and.png
 │       ├── waveform_and_delay.png
+│       ├── waveform_mux_2x1.png
+│       ├── waveform_mux_4x1.png
 │       ├── waveform_nand.png
 │       ├── waveform_nand_delay.png
 │       ├── waveform_nor.png
@@ -93,34 +99,42 @@ This repository contains the following modules in the 'gates/' folder:
   `xnor_gate_tb.v` : Testbench for XNOR gate  
   `sim/waveform_xnor.png` : Simulation waveform
 
+- `mux_2x1.v` : 2-to-1 multiplexer (MUX)  
+  `mux_2x1_tb.v` : Testbench for 2-to-1 multiplexer  
+  `sim/waveform_mux_2x1.png` : Simulation waveform
+
+- `mux_4x1.v` : 4-to-1 multiplexer (MUX)  
+  `mux_4x1_tb.v` : Testbench for 4-to-1 multiplexer  
+  `sim/waveform_mux_4x1.png` : Simulation waveform
+
 ### Delay-Based Gates
 
 - `delay/and_gate_delay.v` : 1-bit AND gate with 5ns delay  
-  `delay/and_gate_delay_tb.v` : Testbench for delayed AND gate  
+  `delay/and_gate_delay_tb.v` : Testbench for 1-bit AND gate with delay  
   `sim/waveform_and_delay.png` : Simulation waveform showing 5ns delay
 
 - `delay/or_gate_delay.v` : 1-bit OR gate with 5ns delay  
-  `delay/or_gate_delay_tb.v` : Testbench for delayed OR gate  
+  `delay/or_gate_delay_tb.v` : Testbench for 1-bit OR gate with delay  
   `sim/waveform_or_delay.png` : Simulation waveform showing 5ns delay
 
 - `delay/not_gate_delay.v` : 1-bit NOT gate with 5ns delay  
-  `delay/not_gate_delay_tb.v` : Testbench for delayed NOT gate  
+  `delay/not_gate_delay_tb.v` : Testbench for 1-bit NOT gate with delay  
   `sim/waveform_not_delay.png` : Simulation waveform showing 5ns delay
 
 - `delay/nand_gate_delay.v` : 1-bit NAND gate with 5ns delay  
-  `delay/nand_gate_delay_tb.v` : Testbench for delayed NAND gate  
+  `delay/nand_gate_delay_tb.v` : Testbench for 1-bit NAND gate with delay  
   `sim/waveform_nand_delay.png` : Simulation waveform showing 5ns delay
 
 - `delay/nor_gate_delay.v` : 1-bit NOR gate with 5ns delay  
-  `delay/nor_gate_delay_tb.v` : Testbench for delayed NOR gate  
+  `delay/nor_gate_delay_tb.v` : Testbench for 1-bit NOR gate with delay  
   `sim/waveform_nor_delay.png` : Simulation waveform showing 5ns delay
 
 - `delay/xor_gate_delay.v` : 1-bit XOR gate with 5ns delay  
-  `delay/xor_gate_delay_tb.v` : Testbench for delayed XOR gate  
+  `delay/xor_gate_delay_tb.v` : Testbench for 1-bit XOR gate with delay  
   `sim/waveform_xor_delay.png` : Simulation waveform showing 5ns delay
 
 - `delay/xnor_gate_delay.v` : 1-bit XNOR gate with 5ns delay  
-  `delay/xnor_gate_delay_tb.v` : Testbench for delayed XNOR gate  
+  `delay/xnor_gate_delay_tb.v` : Testbench for 1-bit XNOR gate with delay  
   `sim/waveform_xnor_delay.png` : Simulation waveform showing 5ns delay
 
 ## License
