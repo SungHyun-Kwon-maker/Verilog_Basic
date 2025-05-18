@@ -4,13 +4,17 @@
 *.str
 *.xpr
 *.xml
+*.webtalk
 
 # Vivado-generated folders
-*.cache/
-*.hw/
-*.runs/
-*.sim/
-*.ip_user_files/
+.cache/
+.hw/
+.runs/
+.sim/
+.ip_user_files/
+.project/
+.srcs/
+.xgui/
 
 # Simulation and temp files
 *.wdb
@@ -21,3 +25,32 @@
 *.bak
 *.tmp
 *.vcd
+*.vvp
+*.out
+*.fir
+*.bin
+*.tar.gz
+*.zip
+
+# Waveform & database
+*.vcd
+*.wcfg
+*.wdb
+*.asdb
+
+# System files
+*.DS_Store
+*.~*
+*~
+
+# Linux-only
+*.swp
+*.swo
+*.swx
+*.d
+
+# Vivado backup
+vivado_*.backup.*
+vivado.jou
+vivado.log
+
