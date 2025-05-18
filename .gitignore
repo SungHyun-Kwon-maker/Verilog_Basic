@@ -34,7 +34,6 @@
 
 # Waveform & database
 *.vcd
-*.wcfg
 *.wdb
 *.asdb
 

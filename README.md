@@ -1,8 +1,8 @@
-# Verilog_Basic
+# Verilog_Basic: Digital Logic Modules & Simulation with Vivado
 Basic Verilog modules for digital logic practice (AND, OR, NOT, XOR, NAND, NOR, Half Adder, etc.) with testbenches and simulation results.
 
 ## Goal
-To practice implementing and **verifying** basic digital logic gates using Verilog HDL.
+To practice implementing and verifying basic digital logic gates using Verilog HDL.
 
 ## Environment
 - **Language** : Verilog (Vivado 2024.2)
@@ -14,6 +14,10 @@ Verilog_Basic/
 ├── gates/
 │   ├── and_gate.v
 │   ├── and_gate_tb.v
+│   ├── decoder_2x4.v
+│   ├── decoder_2x4_tb.v
+│   ├── decoder_3x8.v
+│   ├── decoder_3x8_tb.v
 │   ├── demux_1x2.v
 │   ├── demux_1x2_tb.v
 │   ├── demux_1x4.v
@@ -52,6 +56,10 @@ Verilog_Basic/
 │   └── sim/
 │       ├── waveform_and.png
 │       ├── waveform_and_delay.png
+│       ├── waveform_decoder_2x4.png
+│       ├── decoder_2x4_tb_behav.wcfg
+│       ├── waveform_decoder_3x8.png
+│       ├── decoder_3x8_tb_behav.wcfg
 │       ├── waveform_demux_1x2.png
 │       ├── waveform_demux_1x4.png
 │       ├── waveform_mux_2x1.png
@@ -76,6 +84,8 @@ Verilog_Basic/
 ## Included Modules 
 
 This repository contains the following modules in the 'gates/' folder:
+
+### Logic Gates
 
 - `and_gate.v` : 1-bit AND gate  
   `and_gate_tb.v` : Testbench for AND gate  
@@ -105,6 +115,8 @@ This repository contains the following modules in the 'gates/' folder:
   `xnor_gate_tb.v` : Testbench for XNOR gate  
   `sim/waveform_xnor.png` : Simulation waveform
 
+### Multiplexers
+
 - `mux_2x1.v` : 2-to-1 multiplexer (MUX)  
   `mux_2x1_tb.v` : Testbench for 2-to-1 multiplexer  
   `sim/waveform_mux_2x1.png` : Simulation waveform
@@ -113,6 +125,8 @@ This repository contains the following modules in the 'gates/' folder:
   `mux_4x1_tb.v` : Testbench for 4-to-1 multiplexer  
   `sim/waveform_mux_4x1.png` : Simulation waveform
   
+### Demultiplexers
+
 - `demux_1x2.v` : 1-to-2 demultiplexer (DEMUX)  
   `demux_1x2_tb.v` : Testbench for 1-to-2 demultiplexer  
   `sim/waveform_demux_1x2.png` : Simulation waveform
@@ -120,6 +134,18 @@ This repository contains the following modules in the 'gates/' folder:
 - `demux_1x4.v` : 1-to-4 demultiplexer (DEMUX)  
   `demux_1x4_tb.v` : Testbench for 1-to-4 demultiplexer  
   `sim/waveform_demux_1x4.png` : Simulation waveform
+  
+### Decoders
+
+- `decoder_2x4.v` : 2-to-4 decoder (DECODER)  
+  `decoder_2x4_tb.v` : Testbench for 2-to-4 decoder  
+  `sim/waveform_decoder_2x4.png` : Simulation waveform  
+  `sim/decoder_2x4_tb_behav.wcfg` : .wcfg file
+  
+- `decoder_3x8.v` : 3-to-8 decoder (DECODER)  
+  `decoder_3x8_tb.v` : Testbench for 3-to-8 decoder  
+  `sim/waveform_decoder_3x8.png` : Simulation waveform  
+  `sim/decoder_3x8_tb_behav.wcfg` : .wcfg file
 
 ### Delay-Based Gates
 
