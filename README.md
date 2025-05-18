@@ -2,7 +2,7 @@
 Basic Verilog modules for digital logic practice (AND, OR, NOT, XOR, NAND, NOR, Half Adder, etc.) with testbenches and simulation results.
 
 ## Goal
-To practice implementing and verifying basic digital logic gates using Verilog HDL.
+To practice implementing and **verifying** basic digital logic gates using Verilog HDL.
 
 ## Environment
 - **Language** : Verilog (Vivado 2024.2)
@@ -14,6 +14,10 @@ Verilog_Basic/
 ├── gates/
 │   ├── and_gate.v
 │   ├── and_gate_tb.v
+│   ├── demux_1x2.v
+│   ├── demux_1x2_tb.v
+│   ├── demux_1x4.v
+│   ├── demux_1x4_tb.v
 │   ├── mux_2x1.v
 │   ├── mux_2x1_tb.v
 │   ├── mux_4x1.v
@@ -48,6 +52,8 @@ Verilog_Basic/
 │   └── sim/
 │       ├── waveform_and.png
 │       ├── waveform_and_delay.png
+│       ├── waveform_demux_1x2.png
+│       ├── waveform_demux_1x4.png
 │       ├── waveform_mux_2x1.png
 │       ├── waveform_mux_4x1.png
 │       ├── waveform_nand.png
@@ -106,6 +112,14 @@ This repository contains the following modules in the 'gates/' folder:
 - `mux_4x1.v` : 4-to-1 multiplexer (MUX)  
   `mux_4x1_tb.v` : Testbench for 4-to-1 multiplexer  
   `sim/waveform_mux_4x1.png` : Simulation waveform
+  
+- `demux_1x2.v` : 1-to-2 demultiplexer (DEMUX)  
+  `demux_1x2_tb.v` : Testbench for 1-to-2 demultiplexer  
+  `sim/waveform_demux_1x2.png` : Simulation waveform
+
+- `demux_1x4.v` : 1-to-4 demultiplexer (DEMUX)  
+  `demux_1x4_tb.v` : Testbench for 1-to-4 demultiplexer  
+  `sim/waveform_demux_1x4.png` : Simulation waveform
 
 ### Delay-Based Gates
 
