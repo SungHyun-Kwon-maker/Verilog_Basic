@@ -22,6 +22,10 @@ Verilog_Basic/
 │   ├── demux_1x2_tb.v
 │   ├── demux_1x4.v
 │   ├── demux_1x4_tb.v
+│   ├── encoder_4x2.v
+│   ├── encoder_4x2_tb.v
+│   ├── encoder_8x3.v
+│   ├── encoder_8x3_tb.v
 │   ├── mux_2x1.v
 │   ├── mux_2x1_tb.v
 │   ├── mux_4x1.v
@@ -57,11 +61,11 @@ Verilog_Basic/
 │       ├── waveform_and.png
 │       ├── waveform_and_delay.png
 │       ├── waveform_decoder_2x4.png
-│       ├── decoder_2x4_tb_behav.wcfg
 │       ├── waveform_decoder_3x8.png
-│       ├── decoder_3x8_tb_behav.wcfg
 │       ├── waveform_demux_1x2.png
 │       ├── waveform_demux_1x4.png
+│       ├── waveform_encoder_4x2.png
+│       ├── waveform_encoder_8x3.png
 │       ├── waveform_mux_2x1.png
 │       ├── waveform_mux_4x1.png
 │       ├── waveform_nand.png
@@ -140,12 +144,20 @@ This repository contains the following modules in the 'gates/' folder:
 - `decoder_2x4.v` : 2-to-4 decoder (DECODER)  
   `decoder_2x4_tb.v` : Testbench for 2-to-4 decoder  
   `sim/waveform_decoder_2x4.png` : Simulation waveform  
-  `sim/decoder_2x4_tb_behav.wcfg` : .wcfg file
   
 - `decoder_3x8.v` : 3-to-8 decoder (DECODER)  
   `decoder_3x8_tb.v` : Testbench for 3-to-8 decoder  
   `sim/waveform_decoder_3x8.png` : Simulation waveform  
-  `sim/decoder_3x8_tb_behav.wcfg` : .wcfg file
+
+### Encoders
+
+- `encoder_4x2.v` : 4-to-2 encoder (ENCODER)  
+  `encoder_4x2_tb.v` : Testbench for 4-to-2 encoder  
+  `sim/waveform_encoder_4x2.png` : Simulation waveform  
+  
+- `encoder_8x3.v` : 8-to-3 encoder (ENCODER)  
+  `encoder_8x3_tb.v` : Testbench for 8-to-3 encoder  
+  `sim/waveform_encoder_8x3.png` : Simulation waveform  
 
 ### Delay-Based Gates
 
