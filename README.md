@@ -38,6 +38,10 @@ Verilog_Basic/
 │   ├── not_gate_tb.v
 │   ├── or_gate.v
 │   ├── or_gate_tb.v
+│   ├── priority_encoder_4x2.v
+│   ├── priority_encoder_4x2_tb.v
+│   ├── priority_encoder_8x3.v
+│   ├── priority_encoder_8x3_tb.v
 │   ├── xnor_gate.v
 │   ├── xnor_gate_tb.v
 │   ├── xor_gate.v
@@ -76,6 +80,8 @@ Verilog_Basic/
 │       ├── waveform_not_delay.png
 │       ├── waveform_or.png
 │       ├── waveform_or_delay.png
+│       ├── waveform_priority_encoder_4x2.png
+│       ├── waveform_priority_encoder_8x3.png
 │       ├── waveform_xnor.png
 │       ├── waveform_xnor_delay.png
 │       ├── waveform_xor.png
@@ -158,6 +164,14 @@ This repository contains the following modules in the 'gates/' folder:
 - `encoder_8x3.v` : 8-to-3 encoder (ENCODER)  
   `encoder_8x3_tb.v` : Testbench for 8-to-3 encoder  
   `sim/waveform_encoder_8x3.png` : Simulation waveform  
+  
+- `priority_encoder_4x2.v` : 4-to-2 priority encoder (Priority Encoder)  
+  `priority_encoder_4x2_tb.v` : Testbench for 4-to-2 priority encoder  
+  `sim/waveform_priority_encoder_4x2.png` : Simulation waveform  
+
+- `priority_encoder_8x3.v` : 8-to-3 priority encoder (Priority Encoder)  
+  `priority_encoder_8x3_tb.v` : Testbench for 8-to-3 priority encoder  
+  `sim/waveform_priority_encoder_8x3.png` : Simulation waveform  
 
 ### Delay-Based Gates
 
