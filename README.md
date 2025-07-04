@@ -14,6 +14,8 @@ Verilog_Basic/
 ├── gates/
 │   ├── and_gate.v
 │   ├── and_gate_tb.v
+│   ├── carry_lookahead_adder.v
+│   ├── carry_lookahead_adder_tb.v
 │   ├── decoder_2x4.v
 │   ├── decoder_2x4_tb.v
 │   ├── decoder_3x8.v
@@ -26,6 +28,14 @@ Verilog_Basic/
 │   ├── encoder_4x2_tb.v
 │   ├── encoder_8x3.v
 │   ├── encoder_8x3_tb.v
+│   ├── full_adder.v
+│   ├── full_adder_tb.v
+│   ├── full_adder_2bit.v
+│   ├── full_adder_2bit_tb.v
+│   ├── full_adder_4bit.v
+│   ├── full_adder_4bit_tb.v
+│   ├── half_adder.v
+│   ├── half_adder_tb.v
 │   ├── mux_2x1.v
 │   ├── mux_2x1_tb.v
 │   ├── mux_4x1.v
@@ -42,6 +52,8 @@ Verilog_Basic/
 │   ├── priority_encoder_4x2_tb.v
 │   ├── priority_encoder_8x3.v
 │   ├── priority_encoder_8x3_tb.v
+│   ├── ripple_carry_adder.v
+│   ├── ripple_carry_adder_tb.v
 │   ├── xnor_gate.v
 │   ├── xnor_gate_tb.v
 │   ├── xor_gate.v
@@ -64,12 +76,17 @@ Verilog_Basic/
 │   └── sim/
 │       ├── waveform_and.png
 │       ├── waveform_and_delay.png
+│       ├── waveform_carry_lookahead_adder.png
 │       ├── waveform_decoder_2x4.png
 │       ├── waveform_decoder_3x8.png
 │       ├── waveform_demux_1x2.png
 │       ├── waveform_demux_1x4.png
 │       ├── waveform_encoder_4x2.png
 │       ├── waveform_encoder_8x3.png
+│       ├── waveform_full_adder.png
+│       ├── waveform_full_adder_2bit.png
+│       ├── waveform_full_adder_4bit.png
+│       ├── waveform_half_adder.png
 │       ├── waveform_mux_2x1.png
 │       ├── waveform_mux_4x1.png
 │       ├── waveform_nand.png
@@ -82,6 +99,7 @@ Verilog_Basic/
 │       ├── waveform_or_delay.png
 │       ├── waveform_priority_encoder_4x2.png
 │       ├── waveform_priority_encoder_8x3.png
+│       ├── waveform_ripple_carry_adder.png
 │       ├── waveform_xnor.png
 │       ├── waveform_xnor_delay.png
 │       ├── waveform_xor.png
@@ -172,6 +190,35 @@ This repository contains the following modules in the 'gates/' folder:
 - `priority_encoder_8x3.v` : 8-to-3 priority encoder (Priority Encoder)  
   `priority_encoder_8x3_tb.v` : Testbench for 8-to-3 priority encoder  
   `sim/waveform_priority_encoder_8x3.png` : Simulation waveform  
+
+### Adder
+
+- `half_adder.v` : 1 bit half adder  
+  `half_adder_tb.v` : Testbench 1 bit half adder  
+  `sim/waveform_half_adder.png` : Simulation waveform
+
+- `full_adder.v` : 1 bit full adder  
+  `full_adder_tb.v` : Testbench for 1 bit full adder  
+  `sim/waveform_full_adder.png` : Simulation waveform
+  
+- `full_adder_2bit.v` : 2 bit full adder  
+  `full_adder_2bit_tb.v` : Testbench for 2 bit full adder  
+  `sim/waveform_full_adder_2bit.png` : Simulation waveform
+  
+- `full_adder_4bit.v` : 4 bit full adder  
+  `full_adder_4bit_tb.v` : Testbench for 4 bit full adder  
+  `sim/waveform_full_adder_4bit.png` : Simulation waveform
+  
+- `ripple_carry_adder.v` : N bit Ripple Carry Adder  
+  `ripple_carry_adder_tb.v` : Testbench for N bit Ripple Carry Adder  
+  `sim/waveform_ripple_carry_adder.png` : Simulation waveform
+  
+- `carry_lookahead_adder.v` : N bit Carry-lookahead adder  
+  `carry_lookahead_adder_tb.v` : Testbench for N bit Carry-lookahead adder  
+  `sim/waveform_carry_lookahead_adder.png` : Simulation waveform
+  > 🔍 **Note**:  
+  > The `carry_lookahead_adder.v` is written as a **behavioral model** for clarity and parameterization.  
+  > Vivado synthesizer will optimize carry chains using FPGA-specific primitives like `CARRY4`.
 
 ### Delay-Based Gates
 
