@@ -1,254 +1,88 @@
 # Verilog_Basic: Digital Logic Modules & Simulation with Vivado
+
 Basic Verilog modules for digital logic practice (AND, OR, NOT, XOR, NAND, NOR, Half Adder, etc.) with testbenches and simulation results.
 
 ## Goal
 To practice implementing and verifying basic digital logic gates using Verilog HDL.
 
 ## Environment
-- **Language** : Verilog (Vivado 2024.2)
+- **Language** : Verilog/SystemVerilog (Vivado 2024.2.2)
 - **Board** : BASYS3 FPGA BOARD FOR VIVADO
 
 ## File Structure
 ```
 Verilog_Basic/
-├── gates/
-│   ├── and_gate.v
-│   ├── and_gate_tb.v
-│   ├── carry_lookahead_adder.v
-│   ├── carry_lookahead_adder_tb.v
-│   ├── decoder_2x4.v
-│   ├── decoder_2x4_tb.v
-│   ├── decoder_3x8.v
-│   ├── decoder_3x8_tb.v
-│   ├── demux_1x2.v
-│   ├── demux_1x2_tb.v
-│   ├── demux_1x4.v
-│   ├── demux_1x4_tb.v
-│   ├── encoder_4x2.v
-│   ├── encoder_4x2_tb.v
-│   ├── encoder_8x3.v
-│   ├── encoder_8x3_tb.v
-│   ├── full_adder.v
-│   ├── full_adder_tb.v
-│   ├── full_adder_2bit.v
-│   ├── full_adder_2bit_tb.v
-│   ├── full_adder_4bit.v
-│   ├── full_adder_4bit_tb.v
-│   ├── half_adder.v
-│   ├── half_adder_tb.v
-│   ├── mux_2x1.v
-│   ├── mux_2x1_tb.v
-│   ├── mux_4x1.v
-│   ├── mux_4x1_tb.v
-│   ├── nand_gate.v
-│   ├── nand_gate_tb.v
-│   ├── nor_gate.v
-│   ├── nor_gate_tb.v
-│   ├── not_gate.v
-│   ├── not_gate_tb.v
-│   ├── or_gate.v
-│   ├── or_gate_tb.v
-│   ├── priority_encoder_4x2.v
-│   ├── priority_encoder_4x2_tb.v
-│   ├── priority_encoder_8x3.v
-│   ├── priority_encoder_8x3_tb.v
-│   ├── ripple_carry_adder.v
-│   ├── ripple_carry_adder_tb.v
-│   ├── xnor_gate.v
-│   ├── xnor_gate_tb.v
-│   ├── xor_gate.v
-│   ├── xor_gate_tb.v
+├── src/                      # Verilog source files (Designs)
+│   ├── basic_gates/
+│   ├── adders/
+│   ├── encoder/
+│   ├── decoder/
+│   ├── multiplexer/
+│   ├── demultiplexer/
 │   ├── delay/
-│   │ ├── and_gate_delay.v
-│   │ ├── and_gate_delay_tb.v
-│   │ ├── nand_gate_delay.v
-│   │ ├── nand_gate_delay_tb.v
-│   │ ├── nor_gate_delay.v
-│   │ ├── nor_gate_delay_tb.v
-│   │ ├── not_gate_delay.v
-│   │ ├── not_gate_delay_tb.v
-│   │ ├── or_gate_delay.v
-│   │ ├── or_gate_delay_tb.v
-│   │ ├── xnor_gate_delay.v
-│   │ ├── xnor_gate_delay_tb.v
-│   │ ├── xor_gate_delay.v
-│   │ └── xor_gate_delay_tb.v
-│   └── sim/
-│       ├── waveform_and.png
-│       ├── waveform_and_delay.png
-│       ├── waveform_carry_lookahead_adder.png
-│       ├── waveform_decoder_2x4.png
-│       ├── waveform_decoder_3x8.png
-│       ├── waveform_demux_1x2.png
-│       ├── waveform_demux_1x4.png
-│       ├── waveform_encoder_4x2.png
-│       ├── waveform_encoder_8x3.png
-│       ├── waveform_full_adder.png
-│       ├── waveform_full_adder_2bit.png
-│       ├── waveform_full_adder_4bit.png
-│       ├── waveform_half_adder.png
-│       ├── waveform_mux_2x1.png
-│       ├── waveform_mux_4x1.png
-│       ├── waveform_nand.png
-│       ├── waveform_nand_delay.png
-│       ├── waveform_nor.png
-│       ├── waveform_nor_delay.png
-│       ├── waveform_not.png
-│       ├── waveform_not_delay.png
-│       ├── waveform_or.png
-│       ├── waveform_or_delay.png
-│       ├── waveform_priority_encoder_4x2.png
-│       ├── waveform_priority_encoder_8x3.png
-│       ├── waveform_ripple_carry_adder.png
-│       ├── waveform_xnor.png
-│       ├── waveform_xnor_delay.png
-│       ├── waveform_xor.png
-│       └── waveform_xor_delay.png
+├── tb/                       # Testbench files
+│   ├── basic_gates_tb/
+│   ├── adders_tb/
+│   ├── encoder_tb/
+│   ├── decoder_tb/
+│   ├── multiplexer_tb/
+│   ├── demultiplexer_tb/
+│   ├── delay_tb/
+├── sim/                      # Waveform simulation results (.png)
 ├── README.md
 ├── .gitignore
 └── LICENSE
 ```
 
-## Included Modules 
+## Module Catalog
 
-This repository contains the following modules in the 'gates/' folder:
+### Combinational Logic
 
-### Logic Gates
+| Module             | Description              | Source File                                                  | Testbench File                                                       | Waveform                                          |
+|--------------------|--------------------------|--------------------------------------------------------------|----------------------------------------------------------------------|---------------------------------------------------|
+| Basic Gates        | AND, OR, NOT, NAND, etc. | [basic_gates/](src/basic_gates/)                             | [basic_gates_tb/](tb/basic_gates_tb/)                                | [waveform](sim/waveform_basic_gates)              |
+| Basic Gates(Delay) | AND, OR, NOT, NAND, etc. | [delay/](src/delay/)                                         | [delay_tb/](tb/delay_tb/)                                            | [waveform](sim/waveform_delay)                    |
+| MUX 2x1            | 2-to-1 Multiplexer       | [mux_2x1.v](src/multiplexer/mux_2x1.v)                       | [mux_2x1_tb.v](tb/multiplexer_tb/mux_2x1_tb.v)                       | [waveform](sim/waveform_mux_2x1.png)              |
+| MUX 4x1            | 4-to-1 Multiplexer       | [mux_4x1.v](src/multiplexer/mux_4x1.v)                       | [mux_4x1_tb.v](tb/multiplexer_tb/mux_4x1_tb.v)                       | [waveform](sim/waveform_mux_4x1.png)              |
+| DEMUX 1x2          | 1-to-2 Demultiplexer     | [demux_1x2.v](src/demultiplexer/demux_1x2.v)                 | [demux_1x2_tb.v](tb/demultiplexer_tb/demux_1x2_tb.v)                 | [waveform](sim/waveform_demux_1x2.png)            |
+| DEMUX 1x4          | 1-to-4 Demultiplexer     | [demux_1x4.v](src/demultiplexer/demux_1x4.v)                 | [demux_1x4_tb.v](tb/demultiplexer_tb/demux_1x4_tb.v)                 | [waveform](sim/waveform_demux_1x4.png)            |
+| Decoder 2x4        | 2-to-4 Decoder           | [decoder_2x4.v](src/decoder/decoder_2x4.v)                   | [decoder_2x4_tb.v](tb/decoder_tb/decoder_2x4_tb.v)                   | [waveform](sim/waveform_decoder_2x4.png)          |
+| Decoder 3x8        | 3-to-8 Decoder           | [decoder_3x8.v](src/decoder/decoder_3x8.v)                   | [decoder_3x8_tb.v](tb/decoder_tb/decoder_3x8_tb.v)                   | [waveform](sim/waveform_decoder_3x8.png)          |
+| Encoder 4x2        | 4-to-2 Encoder           | [encoder_4x2.v](src/encoder/encoder_4x2.v)                   | [encoder_4x2_tb.v](tb/encoder_tb/encoder_4x2_tb.v)                   | [waveform](sim/waveform_encoder_4x2.png)          |
+| Encoder 8x3        | 8-to-3 Encoder           | [encoder_8x3.v](src/encoder/encoder_8x3.v)                   | [encoder_8x3_tb.v](tb/encoder_tb/encoder_8x3_tb.v)                   | [waveform](sim/waveform_encoder_8x3.png)          |
+| P. Encoder 4x2     | 4-to-2 Priority Encoder  | [priority_encoder_4x2.v](src/encoder/priority_encoder_4x2.v) | [priority_encoder_4x2_tb.v](tb/encoder_tb/priority_encoder_4x2_tb.v) | [waveform](sim/waveform_priority_encoder_4x2.png) |
+| P. Encoder 8x3     | 8-to-3 Priority Encoder  | [priority_encoder_8x3.v](src/encoder/priority_encoder_8x3.v) | [priority_encoder_8x3_tb.v](tb/encoder_tb/priority_encoder_8x3_tb.v) | [waveform](sim/waveform_priority_encoder_8x3.png) |
 
-- `and_gate.v` : 1-bit AND gate  
-  `and_gate_tb.v` : Testbench for AND gate  
-  `sim/waveform_and.png` : Simulation waveform
+### Arithmetic Circuits
 
-- `or_gate.v` : 1-bit OR gate  
-  `or_gate_tb.v` : Testbench for OR gate  
-  `sim/waveform_or.png` : Simulation waveform
+| Module              | Description                                  | Source File                                                     | Testbench File                                                          | Waveform                                               |
+|---------------------|----------------------------------------------|-----------------------------------------------------------------|-------------------------------------------------------------------------|--------------------------------------------------------|
+| Half Adder          | 1-bit Half Adder                             | [half_adder.v](src/adders/half_adder.v)                         | [half_adder_tb.v](tb/adders_tb/half_adder_tb.v)                         | [waveform](sim/waveform_half_adder.png)                |
+| Full Adder          | 1-bit Full Adder                             | [full_adder.v](src/adders/full_adder.v)                         | [full_adder_tb.v](tb/adders_tb/full_adder_tb.v)                         | [waveform](sim/waveform_full_adder.png)                |
+| Full Adder 2-bit    | 2-bit Full Adder                             | [full_adder.v](src/adders/full_adder_2bit.v)                    | [full_adder_tb.v](tb/adders_tb/full_adder_2bit_tb.v)                    | [waveform](sim/waveform_full_adder_2bit.png)           |
+| Full Adder 4-bit    | 4-bit Full Adder                             | [full_adder.v](src/adders/full_adder_4bit.v)                    | [full_adder_tb.v](tb/adders_tb/full_adder_4bit_tb.v)                    | [waveform](sim/waveform_full_adder_4bit.png)           |
+| Ripple Carry Adder  | N-bit Ripple Carry Adder                     | [ripple_carry_adder.v](src/adders/ripple_carry_adder.v)         | [ripple_carry_adder_tb.v](tb/adders_tb/ripple_carry_adder_tb.v)         | [waveform](sim/waveform_ripple_carry_adder.png)        |
+| Carry Lookahead     | N-bit Carry Lookahead Adder                  | [carry_lookahead_adder.v](src/adders/carry_lookahead_adder.v)   | [carry_lookahead_adder_tb.v](tb/adders_tb/carry_lookahead_adder_tb.v)   | [waveform](sim/waveform_carry_lookahead_adder.png)     |
+| MUX 2x1             | N-bit 2-to-1 Multiplexer(SystemVerilog)      | [mux_2x1.sv](src/multiplexer/mux_2x1.sv)                        | [mux_2x1_tb.sv](tb/multiplexer_tb/mux_2x1_tb.sv)                        | [waveform](sim/waveform_mux_2x1_sv.png)                |
+| Half Adder          | 1-bit Half Adder(SystemVerilog)              | [half_adder.sv](src/adders/half_adder.sv)                       | [half_adder_tb.sv](tb/adders_tb/half_adder_tb.sv)                       | [waveform](sim/waveform_half_adder_sv.png)             |
+| Full Adder          | 1-bit Full Adder(SystemVerilog)              | [full_adder.sv](src/adders/full_adder.sv)                       | [full_adder_tb.sv](tb/adders_tb/full_adder_tb.sv)                       | [waveform](sim/waveform_full_adder_sv.png)             |
+| Ripple Carry Adder  | N-bit Ripple Carry Adder(SystemVerilog)      | [ripple_carry_adder.sv](src/adders/ripple_carry_adder.sv)       | [ripple_carry_adder_tb.sv](tb/adders_tb/ripple_carry_adder_tb.sv)       | [waveform](sim/waveform_ripple_carry_adder_sv.png)     |
+| Carry Lookahead     | N-bit Carry Lookahead Adder(SystemVerilog)   | [carry_lookahead_adder.sv](src/adders/carry_lookahead_adder.sv) | [carry_lookahead_adder_tb.sv](tb/adders_tb/carry_lookahead_adder_tb.sv) | [waveform](sim/waveform_carry_lookahead_adder_sv.png)  |
+| Carry Select Adder  | N-bit Carry Select Adder                     | [carry_select_adder.sv](src/adders/carry_select_adder.sv)       | [carry_select_adder_tb.sv](tb/adders_tb/carry_select_adder_tb.sv)       | [waveform](sim/waveform_carry_select_adder.png)        |
 
-- `not_gate.v` : 1-bit NOT gate  
-  `not_gate_tb.v` : Testbench for NOT gate  
-  `sim/waveform_not.png` : Simulation waveform
+### Adder Architecture Comparison (FPGA)
 
-- `nand_gate.v` : 1-bit NAND gate  
-  `nand_gate_tb.v` : Testbench for NAND gate  
-  `sim/waveform_nand.png` : Simulation waveform
+| Adder Type                | Critical Path Delay | Logic LUTs |
+|---------------------------|---------------------|------------|
+| Ripple Carry Adder (RCA)  | 23.335 ns           | 32         |
+| Carry Lookahead Adder     | 12.222 ns           | 56         |
+| Carry Select Adder (CSA)  | 12.222 ns           | 56         |
 
-- `nor_gate.v` : 1-bit NOR gate  
-  `nor_gate_tb.v` : Testbench for NOR gate  
-  `sim/waveform_nor.png` : Simulation waveform
-
-- `xor_gate.v` : 1-bit XOR gate  
-  `xor_gate_tb.v` : Testbench for XOR gate  
-  `sim/waveform_xor.png` : Simulation waveform
-
-- `xnor_gate.v` : 1-bit XNOR gate  
-  `xnor_gate_tb.v` : Testbench for XNOR gate  
-  `sim/waveform_xnor.png` : Simulation waveform
-
-### Multiplexers
-
-- `mux_2x1.v` : 2-to-1 multiplexer (MUX)  
-  `mux_2x1_tb.v` : Testbench for 2-to-1 multiplexer  
-  `sim/waveform_mux_2x1.png` : Simulation waveform
-
-- `mux_4x1.v` : 4-to-1 multiplexer (MUX)  
-  `mux_4x1_tb.v` : Testbench for 4-to-1 multiplexer  
-  `sim/waveform_mux_4x1.png` : Simulation waveform
-  
-### Demultiplexers
-
-- `demux_1x2.v` : 1-to-2 demultiplexer (DEMUX)  
-  `demux_1x2_tb.v` : Testbench for 1-to-2 demultiplexer  
-  `sim/waveform_demux_1x2.png` : Simulation waveform
-
-- `demux_1x4.v` : 1-to-4 demultiplexer (DEMUX)  
-  `demux_1x4_tb.v` : Testbench for 1-to-4 demultiplexer  
-  `sim/waveform_demux_1x4.png` : Simulation waveform
-  
-### Decoders
-
-- `decoder_2x4.v` : 2-to-4 decoder (DECODER)  
-  `decoder_2x4_tb.v` : Testbench for 2-to-4 decoder  
-  `sim/waveform_decoder_2x4.png` : Simulation waveform  
-  
-- `decoder_3x8.v` : 3-to-8 decoder (DECODER)  
-  `decoder_3x8_tb.v` : Testbench for 3-to-8 decoder  
-  `sim/waveform_decoder_3x8.png` : Simulation waveform  
-
-### Encoders
-
-- `encoder_4x2.v` : 4-to-2 encoder (ENCODER)  
-  `encoder_4x2_tb.v` : Testbench for 4-to-2 encoder  
-  `sim/waveform_encoder_4x2.png` : Simulation waveform  
-  
-- `encoder_8x3.v` : 8-to-3 encoder (ENCODER)  
-  `encoder_8x3_tb.v` : Testbench for 8-to-3 encoder  
-  `sim/waveform_encoder_8x3.png` : Simulation waveform  
-  
-- `priority_encoder_4x2.v` : 4-to-2 priority encoder (Priority Encoder)  
-  `priority_encoder_4x2_tb.v` : Testbench for 4-to-2 priority encoder  
-  `sim/waveform_priority_encoder_4x2.png` : Simulation waveform  
-
-- `priority_encoder_8x3.v` : 8-to-3 priority encoder (Priority Encoder)  
-  `priority_encoder_8x3_tb.v` : Testbench for 8-to-3 priority encoder  
-  `sim/waveform_priority_encoder_8x3.png` : Simulation waveform  
-
-### Adder
-
-- `half_adder.v` : 1 bit half adder  
-  `half_adder_tb.v` : Testbench 1 bit half adder  
-  `sim/waveform_half_adder.png` : Simulation waveform
-
-- `full_adder.v` : 1 bit full adder  
-  `full_adder_tb.v` : Testbench for 1 bit full adder  
-  `sim/waveform_full_adder.png` : Simulation waveform
-  
-- `full_adder_2bit.v` : 2 bit full adder  
-  `full_adder_2bit_tb.v` : Testbench for 2 bit full adder  
-  `sim/waveform_full_adder_2bit.png` : Simulation waveform
-  
-- `full_adder_4bit.v` : 4 bit full adder  
-  `full_adder_4bit_tb.v` : Testbench for 4 bit full adder  
-  `sim/waveform_full_adder_4bit.png` : Simulation waveform
-  
-- `ripple_carry_adder.v` : N bit Ripple Carry Adder  
-  `ripple_carry_adder_tb.v` : Testbench for N bit Ripple Carry Adder  
-  `sim/waveform_ripple_carry_adder.png` : Simulation waveform
-  
-- `carry_lookahead_adder.v` : N bit Carry-lookahead adder  
-  `carry_lookahead_adder_tb.v` : Testbench for N bit Carry-lookahead adder  
-  `sim/waveform_carry_lookahead_adder.png` : Simulation waveform
-  > 🔍 **Note**:  
-  > The `carry_lookahead_adder.v` is written as a **behavioral model** for clarity and parameterization.  
-  > Vivado synthesizer will optimize carry chains using FPGA-specific primitives like `CARRY4`.
-
-### Delay-Based Gates
-
-- `delay/and_gate_delay.v` : 1-bit AND gate with 5ns delay  
-  `delay/and_gate_delay_tb.v` : Testbench for 1-bit AND gate with delay  
-  `sim/waveform_and_delay.png` : Simulation waveform showing 5ns delay
-
-- `delay/or_gate_delay.v` : 1-bit OR gate with 5ns delay  
-  `delay/or_gate_delay_tb.v` : Testbench for 1-bit OR gate with delay  
-  `sim/waveform_or_delay.png` : Simulation waveform showing 5ns delay
-
-- `delay/not_gate_delay.v` : 1-bit NOT gate with 5ns delay  
-  `delay/not_gate_delay_tb.v` : Testbench for 1-bit NOT gate with delay  
-  `sim/waveform_not_delay.png` : Simulation waveform showing 5ns delay
-
-- `delay/nand_gate_delay.v` : 1-bit NAND gate with 5ns delay  
-  `delay/nand_gate_delay_tb.v` : Testbench for 1-bit NAND gate with delay  
-  `sim/waveform_nand_delay.png` : Simulation waveform showing 5ns delay
-
-- `delay/nor_gate_delay.v` : 1-bit NOR gate with 5ns delay  
-  `delay/nor_gate_delay_tb.v` : Testbench for 1-bit NOR gate with delay  
-  `sim/waveform_nor_delay.png` : Simulation waveform showing 5ns delay
-
-- `delay/xor_gate_delay.v` : 1-bit XOR gate with 5ns delay  
-  `delay/xor_gate_delay_tb.v` : Testbench for 1-bit XOR gate with delay  
-  `sim/waveform_xor_delay.png` : Simulation waveform showing 5ns delay
-
-- `delay/xnor_gate_delay.v` : 1-bit XNOR gate with 5ns delay  
-  `delay/xnor_gate_delay_tb.v` : Testbench for 1-bit XNOR gate with delay  
-  `sim/waveform_xnor_delay.png` : Simulation waveform showing 5ns delay
+> **Note:** Vivado optimizes carry chains using FPGA primitives like `CARRY4`.
 
 ## License
+
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+
+
