@@ -40,8 +40,8 @@ Verilog_Basic/
 
 | Module             | Description              | Source File                                                  | Testbench File                                                       | Waveform                                          |
 |--------------------|--------------------------|--------------------------------------------------------------|----------------------------------------------------------------------|---------------------------------------------------|
-| Basic Gates        | AND, OR, NOT, NAND, etc. | [basic_gates/](src/basic_gates/)                             | [basic_gates_tb/](tb/basic_gates_tb/)                                | [waveform](sim/waveform_basic_gates)              |
-| Basic Gates(Delay) | AND, OR, NOT, NAND, etc. | [delay/](src/delay/)                                         | [delay_tb/](tb/delay_tb/)                                            | [waveform](sim/waveform_delay)                    |
+| Basic Gates        | AND, OR, NOT, NAND, etc. | [basic_gates/](src/basic_gates/)                             | [basic_gates_tb/](tb/basic_gates_tb/)                                | [waveform](sim/waveform_basic_gates.png)          |
+| Basic Gates(Delay) | AND, OR, NOT, NAND, etc. | [delay/](src/delay/)                                         | [delay_tb/](tb/delay_tb/)                                            | [waveform](sim/waveform_delay.png)                |
 | MUX 2x1            | 2-to-1 Multiplexer       | [mux_2x1.v](src/multiplexer/mux_2x1.v)                       | [mux_2x1_tb.v](tb/multiplexer_tb/mux_2x1_tb.v)                       | [waveform](sim/waveform_mux_2x1.png)              |
 | MUX 4x1            | 4-to-1 Multiplexer       | [mux_4x1.v](src/multiplexer/mux_4x1.v)                       | [mux_4x1_tb.v](tb/multiplexer_tb/mux_4x1_tb.v)                       | [waveform](sim/waveform_mux_4x1.png)              |
 | DEMUX 1x2          | 1-to-2 Demultiplexer     | [demux_1x2.v](src/demultiplexer/demux_1x2.v)                 | [demux_1x2_tb.v](tb/demultiplexer_tb/demux_1x2_tb.v)                 | [waveform](sim/waveform_demux_1x2.png)            |
