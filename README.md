@@ -85,7 +85,7 @@ Verilog_Basic/
 
 > **Note:** Vivado optimizes carry chains using FPGA primitives like `CARRY4`.
 
-####Multi-Operand Adder Comparison (4-Operand, 32-bit)
+#### Multi-Operand Adder Comparison (4-Operand, 32-bit)
 | Adder Type                | Critical Path Delay | Logic LUTs |
 |---------------------------|---------------------|------------|
 | CLA(4x32)                 | 17.727 ns           | 178        |
