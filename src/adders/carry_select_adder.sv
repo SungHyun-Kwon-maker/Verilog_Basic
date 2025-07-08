@@ -1,5 +1,5 @@
 // file: carry_select_adder.sv
-// N bit Carry Select Adder (CSA)
+// N bit Carry Select Adder (CSLA)
 module carry_select_adder #(
     parameter N = 32,
     parameter SIZE = 4)
@@ -18,7 +18,7 @@ module carry_select_adder #(
     assign carry_in[0] = cin;
     genvar i;
     generate
-        for(i = 0 ; i < BLOCK ; i++) begin: csa
+        for(i = 0 ; i < BLOCK ; i++) begin: csla
             localparam start_bit = SIZE * i;
             localparam end_bit = start_bit + SIZE -1;
             ripple_carry_adder #(.N(SIZE)) rca_0(

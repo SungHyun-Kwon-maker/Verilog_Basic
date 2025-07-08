@@ -1,5 +1,5 @@
 // file: carry_select_adder_tb.sv
-// Testbench for N bit Carry Select Adder (CSA)
+// Testbench for N bit Carry Select Adder (CSLA)
 `timescale 1 ns / 1 ps
 
 module carry_select_adder_tb;
